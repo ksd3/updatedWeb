@@ -77,6 +77,9 @@ if __name__ == "__main__":
 
     # make prediction for a single data
     # assume new data for now, since the data is so limited
+
+    print("we randomly pick a sample with the age_of_house: 30 years, material_factor: 0.2, cracks_length: 0,\
+    cracks_width:2,leakage_radius: 0, catastrophe_level: 0, location_level:0, to predict the probability of filing a file within 6 month")
     sample = [[1,30,0.2,0,2,0,0,0]]
     prob = logit_model.predict(sample)
     print("The probability of filing a claim within 6 month is: {}".format(np.round(prob[0],2)))
