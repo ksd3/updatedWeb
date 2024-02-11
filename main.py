@@ -23,14 +23,9 @@ def main(image_path, stats_sample):
     # Convert string input to list of floats
     stats_sample_list = [float(item) for item in stats_sample.strip('[]').split(',')]
     stats_output = predict_claim_probability(stats_sample_list)
-    
-    # Prepare input for LLM model
-    llm_input_message = f"Vision Model Output: {vision_output}. Stats Model Output: {stats_output}."
-    
-    # Execute LLM model
-    llm_response = rag_answer(llm_input_message)
-    
-    print("\nFinal LLM Response:", llm_response)
+
+    with open('stats_output.json','w') as json_file:
+        json.dump({'stats':stats_putput},json_file)
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
