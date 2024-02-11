@@ -65,6 +65,7 @@
 if __name__ == "__main__":
 
     import pickle
+    import numpy as np
     # # Save the model
     # with open('./logit_model.pickle', 'wb') as f:
     #     pickle.dump(logit_model, f)
