@@ -26,10 +26,11 @@ def main(image_path, stats_sample):
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        print("Usage: python main_script.py <image_path> '<stats_sample>'")
+        print("Usage: python main_script.py <image_path> <txt> '<stats_sample>'")
         sys.exit(1)
-    
-    image_path = sys.argv[1]
-    stats_sample = sys.argv[2]
-    
-    main(image_path, stats_sample)
+    else:
+        image_path = sys.argv[1]
+        text = sys.argv[2]
+        stats_sample = sys.argv[3]
+
+        main(image_path, stats_sample)
