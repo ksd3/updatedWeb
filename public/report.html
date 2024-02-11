@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display JSON Data</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="data-container">
+    <!-- JSON data will be displayed here -->
+  </div>
+
+  <script>
+    // Get the JSON data
+    const jsonData = {
+      "imagePath": "uploads/imageInput-1707650772547.jpg",
+      "textInput": "water leaking from the pipe"
+    };
+
+    // Function to display JSON data
+    function displayData() {
+      const container = document.getElementById('data-container');
+      const imagePath = jsonData.imagePath;
+      const textInput = jsonData.textInput;
+
+      // Create elements to display the data
+      const imageElement = document.createElement('img');
+      imageElement.src = imagePath;
+
+      const textElement = document.createElement('p');
+      textElement.textContent = textInput;
+
+      // Append elements to the container
+      container.appendChild(imageElement);
+      container.appendChild(textElement);
+    }
+
+    // Call the function to display data
+    displayData();
+  </script>
+</body>
+</html>
