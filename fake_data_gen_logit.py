@@ -78,4 +78,4 @@ if __name__ == "__main__":
     # assume new data for now, since the data is so limited
     sample = [[1,30,0.2,0,2,0,0,0]]
     prob = logit_model.predict(sample)
-    print(prob[0])
+    print("The probability of filing a claim within 6 month is: {}".format(np.round(prob[0],2)))
