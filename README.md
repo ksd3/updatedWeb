@@ -3,4 +3,4 @@ Team donutStealers' (Kshitij Duraphe, Shaunak Halbe, Rong Li, Minyoung Park) pro
 Here is a diagram of our workflow:
 ![](workflow.png)
 
-The full report can be found [here](Insurance survAIyor donutStealers.pdf).
+The full report can be found [here](https://github.com/ksd3/updatedWeb/blob/main/Insurance%20survAIyor%20donutStealers.pdf).
